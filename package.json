@@ -1,0 +1,22 @@
+{
+  "name": "basic-nodejs-api",
+  "version": "1.0.0",
+  "description": "Simple API made with NodeJS",
+  "main": "lib/app.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lesterbp/basic-nodejs-api.git"
+  },
+  "author": "Lester Prudente",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lesterbp/basic-nodejs-api/issues"
+  },
+  "homepage": "https://github.com/lesterbp/basic-nodejs-api#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  }
+}
