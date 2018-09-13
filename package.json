@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Simple API made with NodeJS",
   "main": "lib/app.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node lib/app"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lesterbp/basic-nodejs-api.git"
