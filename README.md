@@ -15,9 +15,11 @@ These commands will install dependencies in `node_modules` folder and it should 
 # starting the server
 For development purpose to auto-load changed files you may use `./node_modules/node-dev/bin/node-dev lib/app` or the shorted command as specified in `package.json` scripts would be
 
-`npm start`
+`npm run dev`
 
-In production it would be advisable to use `node lib/app`
+In production it would be advisable to use `node lib/app` or an npm command as specified in `package.json` would be
+
+`npm start`
 
 # adding dependencies
 `npm install --save your-package-name`

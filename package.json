@@ -4,7 +4,8 @@
   "description": "Simple API made with NodeJS",
   "main": "lib/app.js",
   "scripts": {
-    "start": "./node_modules/node-dev/bin/node-dev lib/app"
+    "start": "node lib/app",
+    "dev": "./node_modules/node-dev/bin/node-dev lib/app"
   },
   "repository": {
     "type": "git",
