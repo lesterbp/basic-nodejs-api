@@ -22,4 +22,6 @@ In production it would be advisable to use `node lib/app`
 # adding dependencies
 `npm install --save your-package-name`
 
-The command will install `your-package-name` and will add it to the `dependencies` in your package.json. You may also add dev dependencies, these are the dependencies needed only during development. Use the command `npm install --save-dev your-package-name` to add a package as a dev dependencies
+The command will install `your-package-name` and will add it to the `dependencies` in your package.json. You may also add dev dependencies, these are the dependencies needed only during development. To add a package as a dev dependency:
+
+`npm install --save-dev your-package-name` 
