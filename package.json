@@ -4,7 +4,7 @@
   "description": "Simple API made with NodeJS",
   "main": "lib/app.js",
   "scripts": {
-    "start": "node lib/app"
+    "start": "./node_modules/node-dev/bin/node-dev lib/app"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "node-dev": "^3.1.3"
   }
 }
