@@ -13,7 +13,7 @@ For production use, it is recommended to only install dependencies needed for pr
 These commands will install dependencies in `node_modules` folder and it should not be committed. You may also just delete the folder if you want to freshly install dependencies.
 
 # starting the server
-For development purpose to auto-load changed files you may use `./node_modules/node-dev/bin/node-dev lib/app` or the shorted command as specified in `package.json` scripts would be
+For development purpose to auto-load changed files you may use `./node_modules/node-dev/bin/node-dev lib/app` or the shorter command as specified in `package.json` scripts would be
 
 `npm run dev`
 
@@ -26,4 +26,4 @@ In production it would be advisable to use `node lib/app` or an npm command as s
 
 The command will install `your-package-name` and will add it to the `dependencies` in your package.json. You may also add dev dependencies, these are the dependencies needed only during development. To add a package as a dev dependency:
 
-`npm install --save-dev your-package-name` 
+`npm install --save-dev your-package-name`
