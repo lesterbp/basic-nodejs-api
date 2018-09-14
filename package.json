@@ -1,0 +1,35 @@
+{
+  "name": "basic-nodejs-api",
+  "version": "1.0.0",
+  "description": "Simple API made with NodeJS",
+  "main": "lib/app.js",
+  "scripts": {
+    "start": "node lib/app",
+    "dev": "./node_modules/.bin/node-dev lib/app",
+    "linter": "./node_modules/.bin/eslint lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lesterbp/basic-nodejs-api.git"
+  },
+  "author": "Lester Prudente",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lesterbp/basic-nodejs-api/issues"
+  },
+  "homepage": "https://github.com/lesterbp/basic-nodejs-api#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "node-dev": "^3.1.3"
+  }
+}
