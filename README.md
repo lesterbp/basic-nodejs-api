@@ -27,3 +27,9 @@ In production it would be advisable to use `node lib/app` or an npm command as s
 The command will install `your-package-name` and will add it to the `dependencies` in your package.json. You may also add dev dependencies, these are the dependencies needed only during development. To add a package as a dev dependency:
 
 `npm install --save-dev your-package-name`
+
+# linter
+This project is using ESLint (https://eslint.org/) as its linter.
+The short command to run the linter as specified in `package.json` scripts:
+
+`npm run linter`
