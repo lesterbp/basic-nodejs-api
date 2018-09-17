@@ -1,5 +1,5 @@
 exports.route = (app) => {
-  const glossaryHandler = require('./handlers/glossaryHandler')
+  const glossaryHandler = require('./lib/handlers/glossaryHandler')
 
   app.get('/glossary', glossaryHandler.getTerms)
   app.get('/glossary/:term', glossaryHandler.getTerm)

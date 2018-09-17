@@ -33,3 +33,14 @@ This project is using ESLint (https://eslint.org/) as its linter.
 The short command to run the linter as specified in `package.json` scripts:
 
 `npm run linter`
+
+# unit tests
+The project uses the following packages for testing
+ - Mocha: for running the actual unit tests (describe, it)
+ - Chai: for testing the values (expect)
+ - Sinon: for stubbing dependencies
+ - Rewire: for injecting dependencies
+
+The full command would be `./node_modules/.bin/mocha --recursive test/unit` but as it is added in `package.json` scripts the short command is:
+
+`npm test`
