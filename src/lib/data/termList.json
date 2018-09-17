@@ -1,0 +1,6 @@
+[
+  { "term": "kb", "meaning": "Kilobyte" },
+  { "term": "kbps", "meaning": "Kilobytes per second" },
+  { "term": "mb", "meaning": "Megabyte" },
+  { "term": "mbps", "meaning": "Megabytes per second" }
+]

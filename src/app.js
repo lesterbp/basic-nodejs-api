@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
 app.use((req, res, next) => {
   console.log(`${req.method}::${req.url}::${JSON.stringify(req.body)}`)
+  res.set('Content-Type', 'application/vnd.api+json')
   next()
 })
 routes.route(app)
