@@ -1,4 +1,5 @@
 const glossaryDb = require('../database/glossaryDatabase')
+const WsAddTermEvent = require('../wsEvents/wsAddTermEvent')
 
 exports.getTerms = async (req, res) => {
   try {
@@ -50,6 +51,7 @@ exports.addTerm = async (req, res) => {
     if (data === null) {
       res.status(409).json({ errors: [{ title: 'term already exist' }] })
     } else {
+      new WsAddTermEvent(data).broadcast()
       res.json({ data })
     }
   } catch (e) {
