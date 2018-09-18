@@ -1,10 +1,14 @@
 # basic-nodejs-api
-Just some basic NodeJs API
+NodeJS sample app with the following in it:
+ - RESTful API using Express
+ - WebSockets
+ - Unit-Tests using Mocha and Chai
+ - And other supporting libraries
 
 # setting up
 Need to have NodeJs installed and install all (dev and prod) project dependencies using:
 
-`npm install --dev`
+`npm install`
 
 For production use, it is recommended to only install dependencies needed for prod and not include dev dependencies.
 
@@ -44,3 +48,18 @@ The project uses the following packages for testing
 The full command would be `./node_modules/.bin/mocha --recursive test/unit` but as it is added in `package.json` scripts the short command is:
 
 `npm test`
+
+# webSockets in action
+The webSocket server is automatically started when you start the app. After starting the app you may directly open the `/websocket_page/index.html` in your browser by dragging the file into it.
+
+`NOTE:` The client side HTML and JS are using new ES (EcmaScript) syntax and HTML5 features. You may need a newer browser version to support it.
+
+## webSocket event broadcast
+Once you do a `POST` call to create a new term on `/glossary` with payload:
+```
+{
+	"term": "newterm",
+	"meaning": "a meaning of newterm"
+}
+```
+This will broadcast the new term to all glossary pages connected to the webSocket server.

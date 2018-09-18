@@ -2,9 +2,11 @@ const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const routes = require('./routes')
+const ws = require('./websocket')
 
 const app = express()
 const port = 3001
+const wsPort = 3002
 
 app.listen(port)
 app.use(bodyParser.json())
@@ -16,4 +18,6 @@ app.use((req, res, next) => {
   next()
 })
 routes.route(app)
-console.log(`app running on port ${port}`)
+console.log(`API running on port ${port}`)
+
+ws.startWebSocketServer(wsPort)
