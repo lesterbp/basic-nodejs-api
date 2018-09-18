@@ -7,6 +7,5 @@ exports.startWebSocketServer = (port) => {
   wss.on('connection', eventHandler.onConnect)
   wss.on('close', eventHandler.onDisconnect)
   wss.on('message', eventHandler.onMessage)
-  
   console.log(`WebSocket running on port ${port}`)
 }

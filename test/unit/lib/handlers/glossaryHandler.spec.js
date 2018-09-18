@@ -1,19 +1,22 @@
 const expect = require('chai').expect
 const sinon = require('sinon')
-const handler = require('../../../src/lib/handlers/glossaryHandler')
-const glossaryDb = require('../../../src/lib/database/glossaryDatabase')
-const Response = require('../../mocks/response')
-const Request = require('../../mocks/request')
+const rewire = require('rewire')
+const handler = rewire('../../../../src/lib/handlers/glossaryHandler')
+const glossaryDb = require('../../../../src/lib/database/glossaryDatabase')
+const Response = require('../../../mocks/response')
+const Request = require('../../../mocks/request')
 
 const sandbox = sinon.createSandbox()
 
 describe('glossaryHandler', () => {
   let mockReq, mockResp
   let getTermsStub, getTermStub, deleteTermStub, addTermStub, updateTermStub
+  let broadcastSpy
 
   beforeEach(() => {
     mockReq = new Request()
     mockResp = new Response()
+
     const terms = [{ term: 'test', meaning: 'meaning of test' }]
     const getAllTermsResult = new Promise( r => r(terms))
     const oneTermResult = new Promise( r => r(terms[0]))
@@ -22,6 +25,12 @@ describe('glossaryHandler', () => {
     deleteTermStub = sandbox.stub(glossaryDb, 'deleteTerm').returns(true)
     addTermStub = sandbox.stub(glossaryDb, 'addTerm').returns(oneTermResult)
     updateTermStub = sandbox.stub(glossaryDb, 'updateTerm').returns(oneTermResult)
+
+    const wsAddTermEventMock = class {
+      broadcast () {}
+    }
+    broadcastSpy = sandbox.spy(wsAddTermEventMock.prototype, 'broadcast')
+    handler.__set__('WsAddTermEvent', wsAddTermEventMock)
   })
 
   afterEach(() => {
@@ -107,6 +116,7 @@ describe('glossaryHandler', () => {
       expect(mockResp.jsonBody).to.deep.equal({
         data: { term: 'test', meaning: 'meaning of test' }
       })
+      expect(broadcastSpy.calledOnce).to.be.true
     })
 
     it('returns 409 and error when term already exist', async () => {
