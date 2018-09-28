@@ -16,6 +16,10 @@ For production use, it is recommended to only install dependencies needed for pr
 
 These commands will install dependencies in `node_modules` folder and it should not be committed. You may also just delete the folder if you want to freshly install dependencies.
 
+
+Create `.env` file based on `.env.template` and fill it up with values.
+This application uses `dotenv` library to load up environment variables from .env file. (https://www.npmjs.com/package/dotenv)
+
 # starting the server
 For development purpose to auto-load changed files you may use `./node_modules/node-dev/bin/node-dev lib/app` or the shorter command as specified in `package.json` scripts would be
 
