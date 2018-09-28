@@ -10,7 +10,7 @@ Need to have NodeJs installed and install all (dev and prod) project dependencie
 
 `npm install`
 
-For production use, it is recommended to only install dependencies needed for prod and not include dev dependencies.
+For production use, it is recommended to only install dependencies needed for prod and not include dev dependencies:
 
 `npm install --prod`
 
@@ -21,11 +21,11 @@ Create `.env` file based on `.env.template` and fill it up with values.
 This application uses `dotenv` library to load up environment variables from .env file. (https://www.npmjs.com/package/dotenv)
 
 # starting the server
-For development purpose to auto-load changed files you may use `./node_modules/node-dev/bin/node-dev lib/app` or the shorter command as specified in `package.json` scripts would be
+For development purpose to auto-load changed files you may use `./node_modules/node-dev/bin/node-dev lib/app` or the shorter command as specified in `package.json` scripts would be:
 
 `npm run dev`
 
-In production it would be advisable to use `node lib/app` or an npm command as specified in `package.json` would be
+In production it would be advisable to use `node lib/app` or an npm command as specified in `package.json` would be:
 
 `npm start`
 

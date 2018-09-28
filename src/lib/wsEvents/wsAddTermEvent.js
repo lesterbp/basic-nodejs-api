@@ -1,4 +1,4 @@
-const WsClientEvent = require('./WsClientEvent')
+const WsClientEvent = require('./wsClientEvent')
 
 module.exports = class WsAddTermEvent extends WsClientEvent {
   constructor (payload = {}, eventType = 'defaultEvent') {
